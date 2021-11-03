@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Galería de imágenes</title>
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+        h1 {
+        color: blue;
+        font-size: 50px;
+
+    }
+    h2{
+        color: coral;
+        font-size: 40px;
+    }
+
+    .container{
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 50vh;
+    }
+
+    img {
+        width: auto;
+        height: 210px;
+
+    }
+
+    .flexItem {
+            display: flex;
+            margin: 5px;
+           
+        }
+        .box1 {
+        
+            width: auto;
+            height: auto;            
+        }
+        .box2 {
+            width: auto;
+            height: auto;          
+        }
+        .box3 {
+            width: auto;
+            height: auto;            
+        }
+        .box4 {
+            width: auto;
+            height: auto;            
+        }
+
+</style>
+<body>
+    <h1>Jelly Sea</h1>
+    <h2>Fotografías de medusas</h2>
+
+    <div style="display:flex; flex-direction: column; height: 300px;  flex-wrap: nowrap">
+        <div class="flexItem box1" >
+         <img src="imagenes/cuatro.jpg" alt="imagenes/cuatro.jpg">
+        </div>
+        <div class="flexItem box2">
+            <img src="imagenes/tres.jpg" alt="imagenes/tres.jpg">
+        </div>
+        <div class="flexItem box3">
+            <img src="imagenes/medusas-1-b.jpg" alt="imagenes/medusas-1-b.jpg">
+        </div>            
+        <div class="flexItem box4">
+            <img src="imagenes/p.png" alt="imagenes/p.png">
+        </div>            
+
+        <div class="flexItem box1" >
+         <img src="imagenes/41f0088684d946483cfa5c6152102fd6.gif" alt="imagenes/41f0088684d946483cfa5c6152102fd6.gif">
+        </div>
+        <div class="flexItem box2">
+            <img src="imagenes/preguntas-medusas.jpg" alt="imagenes/preguntas-medusas.jpg">
+        </div>
+        <div class="flexItem box3">
+            <img src="imagenes/reproduccion_de_las_medusas_23569_orig.jpg" alt="imagenes/reproduccion_de_las_medusas_23569_orig.jpg">
+        </div>            
+        <div class="flexItem box4">
+            <img src="imagenes/seis.jpg" alt="imagenes/seis.jpg">
+        </div>            
+    </div>
+    
+</body>
+</html>
