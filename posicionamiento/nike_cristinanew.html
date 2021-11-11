@@ -31,11 +31,11 @@
 
     div.sticky {
   position: -webkit-sticky;
-  position: relative;
+  position: sticky;
   top: 0;
   padding: 5px;
-  background-color: darkgray;
-  border: 2px solid gray;
+  background-color: white;
+  border: 2px solid white;
 }
 
     h1 {
@@ -85,6 +85,31 @@ a{
   border: 4px solid black;
     }
 
+    .container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 50%;
+  height: auto;
+}
+    .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+.container:hover .overlay {
+  opacity: 1;
+}
     .innaccesibles {
         text-decoration: line-through;
     }
@@ -120,6 +145,12 @@ a{
         covered extensively by Fast Company, Mashable, Engadget,
         PSFK, and Hypebeast.</p>
     <br>
+    <div class="container">
+        <img src="Logo_NIKE.png" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Nike</div>
+        </div>
+      </div>
     </main>
     <footer id="pie">
         <ul>

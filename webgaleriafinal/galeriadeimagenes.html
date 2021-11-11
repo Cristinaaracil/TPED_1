@@ -7,6 +7,14 @@
     <title>Galería de imágenes</title>
 </head>
 <style>
+    div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: darkgray;
+  border: 2px solid gray;
+}
     body{
         background-color: black;
     }
@@ -30,6 +38,7 @@ img{
 a:hover img{
     filter: none;
 }
+
 section{
     display: flex;
     flex-direction: row;
@@ -38,12 +47,14 @@ section{
     justify-content: space-around;
     align-items: center;
 }
+.innaccesibles{}
 </style>
 
 <body>
+    <div class="sticky">Menú de mi galería!    <a href="https://es.wikipedia.org/wiki/Medusozoa"  target="_blank" class="innaccesibles">Medusas</a></div>
     <header>
 <h1>Jelly Sea</h1>
-<h2> Medusas</h2>
+<h2>Medusas </h2>
     </header>
     <section>
         <a href="imagenes/cuatro.jpg" target="_blank"> <img  src="imagenes/cuatro.jpg"> </a>
