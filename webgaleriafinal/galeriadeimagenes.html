@@ -47,8 +47,25 @@ section{
     justify-content: space-around;
     align-items: center;
 }
-.innaccesibles{}
+h2 {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
 </style>
+
 
 <body>
     <div class="sticky">Menú de mi galería!    <a href="https://es.wikipedia.org/wiki/Medusozoa"  target="_blank" class="innaccesibles">Medusas</a></div>
@@ -56,7 +73,9 @@ section{
 <h1>Jelly Sea</h1>
 <h2>Medusas </h2>
     </header>
+   
     <section>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0rPTQsaWOrE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <a href="imagenes/cuatro.jpg" target="_blank"> <img  src="imagenes/cuatro.jpg"> </a>
 
         <a href="imagenes/tres.jpg" target="_blank"><img  src="imagenes/tres.jpg"></a>
