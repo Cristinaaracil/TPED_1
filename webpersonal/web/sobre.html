@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Home page</title>
+  <title>Sobre el diseño</title>
   <link rel="stylesheet" href="general.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -12,13 +12,68 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <style>
+   @media only screen and (min-width: 568px) {
+  /* For mobile phones: */
+ h1{
+     font-size: 20px;
+ }
+  .main {
+    width: 50%;
+  }
+  .main div{
+      width: 10vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 90%;
+  }
+}
+ @media only screen and (min-width: 1200px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
   body {
     background-color: black;
   }
 
+  #cookies {
+    background-color: gray;
+    height: 30px;
+    width: 450px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+
   h1 {
     color: pink;
+    animation-duration: 3s;
+    animation-name: slidein;
+    font-size: 30px;
   }
+
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
 
   article {
     color: blanchedalmond;
@@ -30,7 +85,26 @@
     max-width: 100%;
     filter: grayscale(40%);
   }
+
+  ul {
+    align-items: center;
+    list-style: none;
+  }
+  footer{
+    color: grey;
+    padding-top: 120px;
+    padding-left: 20px;
+    font-size: 10px;
+  }
 </style>
+<script>
+  $(document).ready(function () {
+    $("button").click(function () {
+      $("#cookies").hide();
+    });
+  });
+
+</script>
 
 <body>
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
@@ -53,21 +127,59 @@
     </div>
   </nav>
 
+
+
+
   <main class="row">
     <article class="col-6">
-      <h1>Mi Web</h1>
-      <h2>Página web con mis diseños </h2>
-     Diseños realizados durante el curso de Diseño Gráfico.<br>
-     <br>
-     <button type="button" class="btn btn-outline-primary">Ver Galería</button>
+      <h1>El Diseño Gráfico</h1>
+      <h2>¿Que es el diseño gráfico?</h2>
+      El diseño gráfico es una profesión relacionada a veces con la actividad artística,<br> pero con el claro objetivo
+      de comunicar el mensaje de forma visual.<br>
+      <br>
+
     </article>
-    <nav class="col-6">
 
-      <a href="ic/luna.jpg" target="_selfk"> <img class="grayscale" src="ic/luna.jpg"> </a>
+    <article class="col-6">
+      <h1>Historia del diseño gráfico</h1>
 
-    </nav>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/PAcU4XwYGzc" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe></button>
+
+    </article>
 
   </main>
-</body>
+  <main class="row">
+    <article class="col-6">
 
+      <h1>¿Que hace un diseñador gráfico?</h1>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/KMLprLEc8HI" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+    </article>
+
+    <article class="col-6">
+
+      <h1>Profesiones relacionadas</h1>
+      <ul>
+        <li>Creador de identidades corporativas para empresas</li>
+        <li>Diseño editorial</li>
+        <li>Producción audiovisual</li>
+        <li>Diseño de páginas web</li>
+        <li>Director de arte publicitario</li>
+      </ul>
+
+
+    </article>
+
+  </main>
+  <div id="cookies">
+    ¿Que dice el monstruo de las galletas?
+    COOKIES
+    <button>Cerrar</button>
+  </div>
+</body>
+<footer>Los videos utilizados son de youtube </footer>
 </html>

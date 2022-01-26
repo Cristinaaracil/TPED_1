@@ -12,12 +12,83 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <style>
+  @media only screen and (min-width: 568px) {
+
+    /* For mobile phones: */
+    h1 {
+      font-size: 20px;
+    }
+
+    .main {
+      width: 100%;
+    }
+
+    .main div {
+      width: 10vw;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+
+    /* For mobile phones: */
+    .menu,
+    .main,
+    .right {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+
+    /* For mobile phones: */
+    .menu,
+    .main,
+    .right {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+
+    /* For mobile phones: */
+    .menu,
+    .main,
+    .right {
+      width: 100%;
+    }
+  }
+
   body {
     background-color: black;
   }
 
+  #cookies {
+    background-color: gray;
+    height: 30px;
+    width: 450px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+
+
   h1 {
     color: pink;
+    animation-duration: 3s;
+    animation-name: slidein;
+    font-size: 30px;
+  }
+
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
   }
 
   article {
@@ -30,7 +101,22 @@
     max-width: 100%;
     filter: grayscale(40%);
   }
+
+  footer {
+    color: grey;
+    padding-top: 120px;
+    padding-left: 20px;
+    font-size: 10px;
+  }
 </style>
+<script>
+  $(document).ready(function () {
+    $("button").click(function () {
+      $("#cookies").hide();
+    });
+  });
+
+</script>
 
 <body>
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
@@ -57,9 +143,11 @@
     <article class="col-6">
       <h1>Mi Web</h1>
       <h2>Página web con mis diseños </h2>
-     Diseños realizados durante el curso de Diseño Gráfico.<br>
-     <br>
-     <button type="button" class="btn btn-outline-primary">Ver Galería</button>
+      Diseños realizados durante el curso de Diseño Gráfico.<br>
+      <br>
+
+
+
     </article>
     <nav class="col-6">
 
@@ -68,6 +156,12 @@
     </nav>
 
   </main>
+  <div id="cookies">
+    ¿Que dice el monstruo de las galletas?
+    COOKIES
+    <button>Cerrar</button>
+  </div>
 </body>
+<footer>La mayoría de imágenes utilizadas son de mi propiedad </footer>
 
 </html>

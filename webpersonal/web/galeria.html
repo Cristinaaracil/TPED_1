@@ -12,8 +12,48 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
+         @media only screen and (min-width: 568px) {
+  /* For mobile phones: */
+ h1{
+     font-size: 20px;
+ }
+  .main {
+    width: 50%;
+  }
+  .main div{
+      width: 10vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 90%;
+  }
+}
+ @media only screen and (min-width: 1200px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
         body {
             background-color: rgb(19, 19, 19);
+        }
+
+        #cookies {
+
+            background-color: gray;
+            height: 30px;
+            width: 450px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
         }
 
         h1 {
@@ -21,6 +61,21 @@
             padding-bottom: 30px;
             padding-left: 35%;
             color: pink;
+            animation-duration: 3s;
+            animation-name: slidein;
+            font-size: 30px;
+        }
+
+        @keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 300%
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
         }
 
         article,
@@ -29,9 +84,9 @@
         }
 
         h3 {
-          align-content: center; 
-          text-align: center;
-          padding-left: 20%;
+            align-content: center;
+            text-align: center;
+            padding-left: 20%;
 
         }
 
@@ -45,11 +100,21 @@
             padding: 5px;
             filter: grayscale(100%)
         }
+
         a:hover img {
-        filter: none;
-    }
+            filter: none;
+        }
+
     </style>
 
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#cookies").hide();
+            });
+        });
+
+    </script>
 
 <body>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
@@ -149,9 +214,15 @@
             </div>
         </main>
         <footer class="row">
-            
+            <div id="cookies">
+                ¿Que dice el monstruo de las galletas?
+                COOKIES
+                <button>Cerrar</button>
+            </div>
+
         </footer>
     </div>
+
 </body>
 
 </html>
